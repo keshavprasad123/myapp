@@ -1,0 +1,19 @@
+apiVersion : apps/v1
+kind: Deployment
+metadata:
+  name: "keshavtest1-9115"
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: "keshavtest1-9115"
+  template:
+    metadata:
+      labels:
+        app: "keshavtest1-9115"
+    spec:
+      containers:
+        - name: "keshavtest1-9115"
+          image: "myappv1.azurecr.io/keshavtest1"
+          ports:
+          - containerPort: 80
